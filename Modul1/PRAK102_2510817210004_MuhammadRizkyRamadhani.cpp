@@ -1,28 +1,24 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 struct Kendaraan {
-    char plat[15];
-    char jenis[20];
-    char pemilik[30];
-    char alamat[50];
-    char kota[20];
+    string plat;
+    string jenis;
+    string pemilik;
+    string alamat;
+    string kota;
 };
 
 int main() {
     Kendaraan mobil;
 
-    cout << "\n\nMasukkan Plat Nomor Kendaraan : ";
-    cin >> mobil.plat;
-    cout << "Masukkan Jenis Kendaraan      : ";
-    cin >> mobil.jenis;
-    cout << "Masukkan Nama Pemilik         : ";
-    cin.ignore();
-    cin.getline(mobil.pemilik, 30);
-    cout << "Masukkan Alamat               : ";
-    cin.getline(mobil.alamat, 50);
-    cout << "Masukkan Kota                 : ";
-    cin >> mobil.kota;
+    mobil.plat = "DA1234MK";
+    mobil.jenis = "RUSH";
+    mobil.pemilik = "Andika Hartanto";
+    mobil.alamat = "Jl. Kayu Tangi 1";
+    mobil.kota = "Banjarmasin";
 
     cout << "\n=== Data Kendaraan ===\n";
     cout << "a. Plat Nomor Kendaraan : " << mobil.plat << endl;
